@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Productivity To-Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="intro-section" class="container">
+        <h1 id="introTitle">Welcome to the Anti-Productivity To-Do App</h1>
+        <p id="introMessage">Ready to question everything?</p>
+        </div>
+
+    <div id="todo-app-section" class="container hidden">
+        <h2>Your Thoughtful To-Do List</h2>
+        <input type="text" id="newTaskInput" placeholder="Add a new task...">
+        <button id="addTaskButton">Add Task</button>
+        <ul id="taskList">
+            </ul>
+    </div>
+
+    <div id="reflective-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Reflect on Your Task</h3>
+            <p id="reflectiveQuestionText"></p>
+            <input type="text" id="reflectiveAnswerInput" placeholder="Your thoughts..." />
+            <button id="nextReflectiveQuestionButton">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

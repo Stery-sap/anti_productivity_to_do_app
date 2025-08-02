@@ -1,0 +1,163 @@
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.078); /* semi-transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 100px auto;
+    color: rgba(208, 212, 223, 0.808);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+
+.hidden {
+    display: none;
+}
+
+button {
+  background-color: #007bff;       /* Change this to your desired color */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Projecting shadow */
+  transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2331779b;       /* Slightly darker on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);     /* Slight lift effect */
+}
+
+button:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);      /* Pressed down effect */
+}
+
+#nextReflectiveQuestionButton {
+    background-color: #35228b; /* Example: Tomato red for a different feel */
+    color: white; /* Keep text white for contrast */
+}
+
+/* Optional: Add a hover effect for this specific button */
+#nextReflectiveQuestionButton:hover {
+    background-color: #112796; /* A darker shade for hover */
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't increase total width */
+}
+
+/* Loader styling */
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* To-Do List Specific Styles */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#taskList li {
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}
+
+#taskList li span {
+    flex-grow: 1;
+}
+
+#taskList li button {
+    margin-left: 10px;
+    background-color: #dc3545; /* Red for delete */
+    padding: 5px 10px;
+    font-size: 14px;
+}
+#taskList li button:hover {
+    background-color: #c82333;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more specific */
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content input[type="text"] {
+    width: calc(100% - 40px); /* Adjust for padding within modal content */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
